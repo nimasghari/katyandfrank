@@ -1,0 +1,19 @@
+{{/*
+  scripts/GetResource
+  Get a scripts asset stored at `/assets/katyandfrank/js`
+
+  @author @regisphilibert
+
+  @context String (.)
+
+  @access private
+
+  @returns Resource
+
+*/}}
+{{ $resource := dict }}
+{{ with resources.Get (print "/katyandfrank/js/" .) }}
+  {{ $resource = . }}
+{{ end }}
+
+{{ return $resource }}

@@ -1,0 +1,38 @@
+{{/*
+  scripts/GetMainJS
+  Process the main js and return as resource
+
+  @author @regisphilibert
+
+  @context Any (.)
+
+  @returns Resource
+
+  @uses
+     - func/scripts/GetResource
+*/}}
+{{ $main_scripts := dict }}
+
+{{/* We prepare a slice of resources to be concatenated as one */}}
+{{ $assets_to_concat := slice }}
+{{/* We add locale js files to the slice in the proper order */}}
+{{ range slice "_main.js"}}
+  {{ with partialCached "func/scripts/GetResource" . . }}
+    {{ $assets_to_concat = $assets_to_concat | append . }}
+  {{ end }}
+{{ end }}
+
+
+{{ with $assets_to_concat }}
+  {{/* We proceed to concatenate the $assets_to_concat */}}
+  {{ $scripts := . | resources.Concat "katyandfrank/js/main.js" }}
+
+  {{/* We fingerprint in production for cache busting purposes */}}
+  {{ if eq (getenv "HUGO_ENV") "production" }}
+    {{ $scripts = $scripts | fingerprint }}
+  {{ end }}
+  {{/* We're ready to set returning variable with resulting resource */}}
+  {{ $main_scripts = $scripts }}
+{{ end }}
+
+{{ return $main_scripts }}
