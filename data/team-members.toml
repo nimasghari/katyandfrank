@@ -1,41 +1,41 @@
-[[ team ]]
+[[team]]
 name = "De'Lisha Fortson"
 position = "Estimator"
 location = "Bell County"
-image_path = ""
+image_path = "/images/Delisha.jpg"
 
-[[ team ]]
+[[team]]
 name = "George Thompson"
 position = "Estimator"
 location = "Louisville, KY"
-image_path = "/images/5-stars.png"
+image_path = "/images/George.jpg"
 
-[[ team ]]
+[[team]]
 name = "Heather Schwing"
 position = "Estimator"
 location = "Amarillo, TX"
-image_path = ""
+image_path = "/images/Heather.jpg"
 
-[[ team ]]
+[[team]]
 name = "Kasi"
 position = "Estimator"
 location = ""
-image_path = ""
+image_path = "/images/kasi.jpg"
 
-[[ team ]]
+[[team]]
 name = "Kelli Hays"
 position = "Estimator"
 location = "Tyler, TX"
-image_path = ""
+image_path = "/images/kelli.jpg"
 
-[[ team ]]
+[[team]]
 name = "Krista Stuck"
 position = "Estimator"
 location = "Omaha, NE"
-image_path = ""
+image_path = "/images/krista.jpg"
 
-[[ team ]]
+[[team]]
 name = "Monique Ramirez"
 position = "Estimator"
 location = "Waco, TX"
-image_path = ""
+image_path = "/images/monique.jpg"
